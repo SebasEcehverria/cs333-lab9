@@ -370,7 +370,11 @@ TODO: click Login with the Username box empty, then type a name and click Login 
 
 Question 8: what happens with the box empty? With a name? Which line stops the empty one from logging in?
 
+**When the username is empty, the application displays "Please type a username." and does not log in. When a username is entered, the application logs in and displays a personalized greeting. The return statement inside the if (username === "") condition stops the function before props.onLogin(username) can execute.**
+
 Question 9: `Login` has its own `username`, and `App` has its own `username`. How does the name get from one to the other?
+
+**The Login component stores the username using useState. When Login is clicked, handleClick calls props.onLogin(username), passing the username to the handleLogin function in App. App then saves the username using setUsername(name) and displays it in the greeting.**
 
 Your whole `App.jsx` should look like this now (with your own console.logs if you added more):
 
