@@ -53,6 +53,8 @@ Your page should show Hello and a form with Username, Password and a Login butto
 
 Question 1: type anything in the boxes and click Login. What happens to the page and to what you typed? (Look at the address bar too.)
 
+**When I click Login, the page reloads and the username and password fields are cleared. The URL changed to include a question mark. This happens because the form submits normally and we haven't added any React functionality to handle the login yet.**
+
 Commit: `Part 1: login app`
 
 ---
