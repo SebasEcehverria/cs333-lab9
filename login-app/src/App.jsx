@@ -3,16 +3,17 @@ import Login from "./Login.jsx";
 
 const isLoggedIn = false;
 
-function renderCondition() {
-  if (isLoggedIn === true) {
-    return <h1>Hello</h1>;
-  } else {
-    return <Login />;
-  }
-}
+const hour = new Date().getHours();
+console.log("The hour is", hour);
 
 function App() {
-  return <div className="App">{renderCondition()}</div>;
+  return (
+    <div className="App">
+      {isLoggedIn ? <h1>Hello</h1> : <Login />}
+
+      {hour >= 17 && <p>It's after 5. Take a break!</p>}
+    </div>
+  );
 }
 
 export default App;

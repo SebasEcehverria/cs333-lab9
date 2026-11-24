@@ -175,6 +175,8 @@ The page should look the same. TODO: flip `isLoggedIn` to `true` and back to `fa
 
 Question 4: read `{isLoggedIn ? <h1>Hello</h1> : <Login />}` out loud in plain English. What does it say?
 
+**If isLoggedIn is true, display Hello. Otherwise, display the Login component.**
+
 10. `&&`. Sometimes you want to show something or nothing at all. Above `function App() {` (not inside it), add:
 
 ```jsx
@@ -191,6 +193,8 @@ and under the `{isLoggedIn ? ... }` line, add:
 TODO: look at the hour in the Console. Change `17` to a number that makes the message show up now, then one that makes it go away.
 
 Question 5: when does the `<p>` show up, and when does nothing show up? Why is `&&` handier than a ternary here?
+
+**The paragraph appears when the hour is greater than or equal to 17. When the condition is false, nothing is displayed. The && operator is easier than a ternary because we only need to display something when the condition is true, without specifying what to display when it is false.**
 
 Commit: `Part 4: ternary and &&`
 
