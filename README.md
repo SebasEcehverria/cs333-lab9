@@ -95,6 +95,8 @@ Save. You should see only the form.
 
 Question 2: what did you see with `true`? With `false`? Why does `renderCondition()` need curly braces around it in `App`?
 
+**When isLoggedIn is true, the page only displays "Hello". When it is false, the page only displays the login form. The curly braces around renderCondition() tell JSX to execute JavaScript and display the result returned by the function.**
+
 Commit: `Part 2: if/else`
 
 ---
