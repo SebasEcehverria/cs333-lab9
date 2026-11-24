@@ -264,7 +264,11 @@ Click Login, then Log out, a few times. Watch the Console.
 
 Question 6: what does the Console print each time you click? Why does "App drew the page" show up again after every click? (You'll probably see each one twice. Same as Lab 8: that's React double-checking your code while you develop.)
 
+**When I click Login, the Console prints "Login clicked" followed by "App drew the page, isLoggedIn is true". When I click Log out, it prints "Log out clicked" followed by "App drew the page, isLoggedIn is false". The App message appears again because updating state causes React to render the component again. In development mode, React Strict Mode may cause the render message to appear twice.**
+
 Question 7: the state lives in `App`, but the Login button is in `Login`. How does clicking the button in `Login` change `isLoggedIn` in `App`? (Follow `handleLogin` from `App` to the button.)
+
+**App passes the handleLogin function to Login through the onLogin prop. When I click the Login button, it calls props.onLogin, which runs handleLogin in App. That function calls setIsLoggedIn(true), updating the state and causing React to display the Hello message.**
 
 Commit: `Part 5: useState`
 
