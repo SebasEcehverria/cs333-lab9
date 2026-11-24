@@ -149,6 +149,8 @@ The page should look the same.
 
 Question 3: `App` uses `Login`, and `Login` uses `Input`. What props does each `Input` get? Where in the page does each one end up?
 
+**The first Input component receives type="text" and placeholder="Username", so it displays the username field. The second Input component receives type="password" and placeholder="Password", so it displays the password field with hidden characters. Both inputs are inside the Login component, which is displayed by App when isLoggedIn is false.**
+
 Commit: `Part 3: Login and Input components`
 
 ---
