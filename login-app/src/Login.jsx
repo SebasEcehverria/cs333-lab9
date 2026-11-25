@@ -1,18 +1,19 @@
 import { useState } from "react";
 import Input from "./Input.jsx";
 
-// Displays the login form and checks that a username was entered.
+// Display the login form and check that the user entered a username.
 function Login(props) {
+  // Store the username and any error messages.
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
 
-  // Updates the username as the user types.
+  // Update the username whenever the user types in the input field.
   function handleChange(event) {
     setUsername(event.target.value);
     console.log("Username input changed");
   }
 
-  // Checks the username and logs in if it is valid.
+  // Check if a username was entered before allowing the user to log in.
   function handleClick() {
     if (username === "") {
       console.log("No username typed");
@@ -20,6 +21,7 @@ function Login(props) {
       return;
     }
 
+    // Clear previous errors and send the username to App.
     console.log("Logging in as", username);
     setError("");
     props.onLogin(username);
@@ -33,10 +35,14 @@ function Login(props) {
         value={username}
         onChange={handleChange}
       />
+
       <Input type="password" placeholder="Password" />
+
       <button type="button" onClick={handleClick}>
         Login
       </button>
+
+      {/* Only show the error message when an error exists. */}
       {error && <p className="error">{error}</p>}
     </form>
   );

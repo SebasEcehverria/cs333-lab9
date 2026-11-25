@@ -1,4 +1,4 @@
-// Creates a reusable input field with properties passed from its parent.
+// Create a reusable input field using properties passed from Login.
 function Input(props) {
     return (
       <input
